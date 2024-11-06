@@ -1,6 +1,7 @@
 import React from 'react'
-import logo_R from '../assets/logo_R.svg'
-import phone from '../assets/phone.svg'
+import logo_R from '../../assets/logo_R.svg'
+import phone from '../../assets/phone.svg'
+import './Header.scss'
 
 export const Header = () => {
   return (

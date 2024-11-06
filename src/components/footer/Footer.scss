@@ -1,0 +1,50 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 7.5rem;
+  background-color: #000000;
+  min-height: 106px;
+
+  &__logo-mobile {
+    display: none;
+  }
+
+  &__text {
+    color: white;
+    text-align: center;
+    line-height: 16px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    min-height: 152px;
+    justify-content: space-evenly;
+    padding: 2rem 1.5rem;
+
+    &__logo {
+      display: none;
+    }
+
+    &__logo-mobile {
+      display: block;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: 0.1px;
+      font-weight: 400;
+    }
+
+    &__text::before {
+      content: "";
+      display: block;
+      width: 336px;
+      height: 0;
+      border-top: 1px solid #ffffff;
+      opacity: 1;
+      margin: 0 auto 1rem auto;
+    }
+  }
+}

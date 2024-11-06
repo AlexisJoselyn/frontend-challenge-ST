@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 7.5rem;
+  min-height: 64px;
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.content__text {
+  margin-right: 10px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.content__phone {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 5px;
+  }
+}

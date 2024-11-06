@@ -1,7 +1,7 @@
 import React from "react";
-import logo_R from '../assets/log_R-white.svg'
-import logo_mobile from '../assets/logo_mobile_white.svg'
-import { getByDisplayValue } from "@testing-library/react";
+import logo_R from '../../assets/log_R-white.svg'
+import logo_mobile from '../../assets/logo_mobile_white.svg'
+import './Footer.scss'
 
 export const Footer = () => {
   return (
