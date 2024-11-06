@@ -1,0 +1,33 @@
+/* App.scss */
+.app__content {
+    position: relative;
+    // min-height: calc(100vh - 100px);
+    background-color: #f5f5f5;
+  }
+  
+  .app__content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 432px;
+    height: 100%;
+    background-image: url('./assets/left-blur.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    pointer-events: none;
+  }
+  
+  .app__content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 432px;
+    height: 100%;
+    background-image: url('./assets/right-blur.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    pointer-events: none; 
+  }
+  
