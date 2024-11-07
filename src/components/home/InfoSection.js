@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "./InfoSection.scss";
 
 export const InfoSection = () => {
@@ -13,6 +14,7 @@ export const InfoSection = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -42,7 +44,7 @@ export const InfoSection = () => {
       documentNumber: !formData.documentNumber,
       cellphone: !formData.cellphone,
       isCheckedPP: !formData.isCheckedPP,
-      isCheckedPC: !formData.isCheckedPC
+      isCheckedPC: !formData.isCheckedPC,
     };
 
     setTimeout(() => {
@@ -60,8 +62,15 @@ export const InfoSection = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (validateForm()) {
+    if (
+      validateForm() &&
+      formData.documentNumber === "30216147" &&
+      formData.cellphone === "5130216147"
+    ) {
       console.log("Success:", formData);
+      navigate("/plans");
+    } else {
+      console.log("Validation failed or incorrect values");
     }
   };
 
@@ -78,9 +87,11 @@ export const InfoSection = () => {
         </p>
       </div>
       <div className="infoSection__text-mobile">
-        <p>Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
-        asesoría. 100% online.</p>
-        </div>
+        <p>
+          Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
+          asesoría. 100% online.
+        </p>
+      </div>
       <form className="infoSection__form" onSubmit={handleSubmit}>
         <div className="form__inputs">
           <div className="inputs__document">
@@ -93,7 +104,11 @@ export const InfoSection = () => {
               <option value="ruc">RUC</option>
               <option value="ce">CNE</option>
             </select>
-            <div className={`document__input-container ${errors.documentNumber ? "error-border" : ""}`}>
+            <div
+              className={`document__input-container ${
+                errors.documentNumber ? "error-border" : ""
+              }`}
+            >
               <input
                 name="documentNumber"
                 value={formData.documentNumber}
@@ -103,7 +118,11 @@ export const InfoSection = () => {
               <label>Nro. de documento</label>
             </div>
           </div>
-          <div className={`inputs__cellphone ${errors.cellphone ? "error-border" : ""}`}>
+          <div
+            className={`inputs__cellphone ${
+              errors.cellphone ? "error-border" : ""
+            }`}
+          >
             <input
               name="cellphone"
               value={formData.cellphone}
