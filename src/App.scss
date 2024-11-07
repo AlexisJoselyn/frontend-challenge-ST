@@ -16,9 +16,7 @@
     background-repeat: no-repeat;
     background-position: left;
     pointer-events: none;
-    @media (max-width: 768px) {
-      transform: scale(5.5);
-    }
+    
   }
   
   .app__content::after {
@@ -32,8 +30,5 @@
     background-repeat: no-repeat;
     background-position: right;
     pointer-events: none;
-    @media (max-width: 768px) {
-      transform: scale(5.5);
-    }
   }
   
