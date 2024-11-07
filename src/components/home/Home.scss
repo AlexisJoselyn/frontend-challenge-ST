@@ -1,0 +1,15 @@
+.home {
+  max-width: 1296px;
+  max-height: 640px;
+  margin: 0 auto;
+  &__sectionOne {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @media (max-width: 768px) {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+}

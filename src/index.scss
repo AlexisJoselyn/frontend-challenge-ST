@@ -2,10 +2,11 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'BR Sonoma', sans-serif;
 }
 
-.app-container {
-  max-width: 1200px;
+.App {
+  max-width: 2400px;
   margin: 0 auto;
 }
 
