@@ -77,6 +77,10 @@ export const InfoSection = () => {
           asesoría. 100% online.
         </p>
       </div>
+      <div className="infoSection__text-mobile">
+        <p>Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra
+        asesoría. 100% online.</p>
+        </div>
       <form className="infoSection__form" onSubmit={handleSubmit}>
         <div className="form__inputs">
           <div className="inputs__document">
