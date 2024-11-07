@@ -1,0 +1,7 @@
+.banner {
+  &__img {
+    @media (max-width: 768px) {
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+.infoSection {
+  max-width: 352px;
+  max-height: 168px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoSection__tag {
+  padding: 4px 8px 4px 8px;
+  width: 172px;
+  height: 24px;
+  border-radius: 4px;
+  background: linear-gradient(86.01deg, #00f4e2 0%, #00ff7f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .tag__text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: center;
+  }
+}
+
+.infoSection__text {
+  width: 352px;
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  h2 {
+    max-width: 352px;
+    max-height: 80px;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0;
+  }
+  
+  p {
+    max-width: 352px;
+    max-height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+form {
+  width: 352px;
+  height: 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .form__document {
+    width: 352px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  
+    select {
+      width: 140px;
+      height: 56px;
+      padding: 0 16px;
+      gap: 8px;
+      border-radius: 8px 0 0 8px;
+      border: 1px solid #5e6488;
+      box-sizing: border-box;
+    }
+  
+    .document__input-container {
+      width: 212px;
+      height: 56px;
+      position: relative;
+    }
+  
+    input {
+      width: 100%;
+      height: 100%;
+      border-radius: 0px 8px 8px 0px;
+      border: 1px solid #5e6488;
+      box-sizing: border-box;
+      padding: 16px;
+    }
+  
+    label {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #5e6488;
+      pointer-events: none;
+      transition: all 0.3 ease;
+    }
+  
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: 16px;
+      left: 16px;
+      font-size: 12px;
+      color: #5e6488;
+      background-color: white;
+    }
+  }
+  
+  .form__cellphone {
+    width: 352px;
+    height: 56px;
+    position: relative;
+  
+    input {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      border: 1px solid #5e6488;
+      box-sizing: border-box;
+      padding: 8px 16px;
+      line-height: 24px;
+    }
+  
+    label {
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #5e6488;
+      pointer-events: none;
+      transition: all 0.3 ease;
+    }
+  
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      top: 16px;
+      left: 16px;
+      font-size: 12px;
+      color: #5e6488;
+      background-color: white;
+    }
+  }
+}
