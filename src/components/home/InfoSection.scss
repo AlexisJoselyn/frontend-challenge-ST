@@ -39,7 +39,7 @@
     line-height: 40px;
     margin: 0;
   }
-  
+
   p {
     max-width: 352px;
     max-height: 40px;
@@ -52,7 +52,7 @@
   }
 }
 
-form {
+.infoSection__form {
   width: 352px;
   height: 128px;
   display: flex;
@@ -65,7 +65,7 @@ form {
     display: flex;
     flex-direction: row;
     position: relative;
-  
+
     select {
       width: 140px;
       height: 56px;
@@ -75,13 +75,13 @@ form {
       border: 1px solid #5e6488;
       box-sizing: border-box;
     }
-  
+
     .document__input-container {
       width: 212px;
       height: 56px;
       position: relative;
     }
-  
+
     input {
       width: 100%;
       height: 100%;
@@ -90,7 +90,7 @@ form {
       box-sizing: border-box;
       padding: 16px;
     }
-  
+
     label {
       position: absolute;
       top: 50%;
@@ -99,9 +99,9 @@ form {
       font-size: 16px;
       color: #5e6488;
       pointer-events: none;
-      transition: all 0.3 ease;
+      transition: all 0.4s ease-out;
     }
-  
+
     input:focus + label,
     input:not(:placeholder-shown) + label {
       top: 16px;
@@ -111,12 +111,12 @@ form {
       background-color: white;
     }
   }
-  
+
   .form__cellphone {
     width: 352px;
     height: 56px;
     position: relative;
-  
+
     input {
       width: 100%;
       height: 100%;
@@ -126,7 +126,7 @@ form {
       padding: 8px 16px;
       line-height: 24px;
     }
-  
+
     label {
       position: absolute;
       top: 50%;
@@ -135,9 +135,9 @@ form {
       font-size: 16px;
       color: #5e6488;
       pointer-events: none;
-      transition: all 0.3 ease;
+      transition: all 0.4s ease-out;
     }
-  
+
     input:focus + label,
     input:not(:placeholder-shown) + label {
       top: 16px;
@@ -147,4 +147,70 @@ form {
       background-color: white;
     }
   }
+}
+
+.infoSection__check {
+  width: 351px;
+  height: 84px;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label {
+    width: 351px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      padding: 2px;
+      cursor: pointer;
+      border: 0.5px solid #0a051e;
+
+      &:checked::after {
+        background-color: #0a051e;
+        content: url(../../assets/check.svg);
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: -1px;
+        left: -1px;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  a {
+    color: #03050f;
+    font-weight: 600;
+  }
+}
+
+.infoSection__button {
+  width: 195px;
+  height: 64px;
+  border-radius: 40px;
+  padding: 20px 40px;
+  background-color: #03050f;
+
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  text-align: center;
 }
