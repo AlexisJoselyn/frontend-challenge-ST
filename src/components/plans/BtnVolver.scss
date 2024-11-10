@@ -1,0 +1,32 @@
+.volver {
+  position: relative;
+  left: 15vw;
+  top: 4vw;
+}
+
+.volver__btn {
+  display: flex;
+  gap: 8px;
+  width: 82px;
+  height: 20px;
+  top: 160px;
+  left: 216px;
+  text-decoration: none;
+  img {
+    width: 20px;
+    height: 20px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  span {
+    width: 54px;
+    height: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.4000000059604645px;
+    text-align: center;
+    color: #4f4fff;
+  }
+}
