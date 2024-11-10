@@ -1,7 +1,18 @@
 .app__content {
   position: relative;
-  min-height: calc(100vh - 106px);
   overflow: hidden;
+  &.with-footer {
+    min-height: calc(100vh - 106px);
+  }
+
+  // Ajuste para cuando el Footer está ausente
+  &.without-footer {
+    min-height: calc(100vh);
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .app__content::before,
