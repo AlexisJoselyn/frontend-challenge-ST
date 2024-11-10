@@ -1,10 +1,12 @@
 .footer {
+  width: 100%;
+  min-height: 106px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 7.5rem;
+  box-sizing: border-box;
   background-color: #000000;
-  min-height: 106px;
 
   &__logo-mobile {
     display: none;
