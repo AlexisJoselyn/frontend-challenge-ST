@@ -124,6 +124,10 @@
         width: 212px;
         height: 56px;
         position: relative;
+        &.error-border {
+          border: 2px solid #ff1c44;
+          border-radius: 0 8px 8px 0;
+        }
       }
 
       input {
@@ -162,6 +166,10 @@
       width: 352px;
       height: 56px;
       position: relative;
+      &.error-border {
+        border: 2px solid #ff1c44;
+        border-radius: 8px;
+      }
 
       input {
         width: 100%;
@@ -204,6 +212,11 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    &.error {
+      color: #ff1c44;
+    }
+
     @media (max-width: 768px) {
       font-size: 14px;
       font-weight: 400;
@@ -274,9 +287,5 @@
       height: 56px;
       padding: 18px 40px;
     }
-  }
-
-  .error-border {
-    border: 1px solid red;
   }
 }
