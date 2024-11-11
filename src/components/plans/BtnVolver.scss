@@ -1,7 +1,9 @@
 .volver {
   position: relative;
   left: 15vw;
-  // top: 4vw;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .volver__btn {

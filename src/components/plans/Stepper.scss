@@ -3,6 +3,9 @@
   justify-content: center;
   background-color: #edeffc;
   height: 56px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .container__stepper {
@@ -25,4 +28,12 @@
 
 .stepper__second {
   color: #7981B2;
+}
+
+.stepper__mobile {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
