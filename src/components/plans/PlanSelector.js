@@ -1,17 +1,18 @@
-import React from "react";
 import "./PlanSelector.scss";
 import PlanCard from "./PlanCard";
+// import PlanResult from "./PlanResult";
 import iconMe from "../../assets/IcProtectionLight.png";
 import iconSomeone from "../../assets/IcAddUserLight.png";
 
 export default function PlanSelector() {
+
   return (
     <div className="plan-selector">
       <div className="plan-selector__info">
-        <h2 className="plan-selector__name">
+        <h2 className="info__name">
           Rocío, ¿Para quién deseas cotizar?
         </h2>
-        <p className="plan-selector__text">
+        <p className="info__text">
           Selecciona la opción que se ajuste más a tus necesidades.
         </p>
       </div>
@@ -27,6 +28,7 @@ export default function PlanSelector() {
           description="Realiza una cotización para uno de tus familiares o cualquier persona."
         ></PlanCard>
       </div>
+      
     </div>
   );
 }
