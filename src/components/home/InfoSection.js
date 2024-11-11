@@ -5,7 +5,6 @@ import { UserContext } from "../../context/UserContext";
 import "./InfoSection.scss";
 
 export const InfoSection = () => {
-  // const [userData, setUserData] = useState(null);
   const { setUserData } = useContext(UserContext);
   const [formData, setFormData] = useState({
     documentType: "dni",
@@ -14,7 +13,7 @@ export const InfoSection = () => {
     isCheckedPP: false,
     isCheckedPC: false,
   });
-  
+
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
@@ -22,13 +21,12 @@ export const InfoSection = () => {
     axios
       .get("https://rimac-front-end-challenge.netlify.app/api/user.json")
       .then((response) => {
-        setUserData({...response.data});
+        setUserData({ ...response.data });
       })
       .catch((error) => {
         console.error("Error obteniendo data de usuario", error);
       });
-  }, []);
-  
+  }, [setUserData]);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -38,12 +36,11 @@ export const InfoSection = () => {
     }));
   };
 
-  console.log(formData);
-
   const validateForm = () => {
+    const documentNumberLength = formData.documentType === "dni" ? 8 : 11;
     const newErrors = {
-      documentNumber: !formData.documentNumber,
-      cellphone: !formData.cellphone,
+      documentNumber: !formData.documentNumber || formData.documentNumber.length !== documentNumberLength,
+      cellphone: !formData.cellphone || formData.cellphone.length !== 9,
       isCheckedPP: !formData.isCheckedPP,
       isCheckedPC: !formData.isCheckedPC,
     };
@@ -63,11 +60,7 @@ export const InfoSection = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (
-      validateForm() &&
-      formData.documentNumber === "30216147" &&
-      formData.cellphone === "5130216147"
-    ) {
+    if (validateForm()) {
       console.log("Success:", formData);
       navigate("/plans");
     } else {
@@ -133,17 +126,17 @@ export const InfoSection = () => {
             <label>Celular</label>
           </div>
         </div>
-        <div className="form__check">
-          <label className={errors.isCheckedPP ? "error-border" : ""}>
+        <div className={`form__check ${errors.isCheckedPC ? "error" : ""}`} >
+          <label>
             <input
               type="checkbox"
               name="isCheckedPP"
               checked={formData.isCheckedPP}
-              onChange={handleInputChange}
+              onChange={handleInputChange}              
             />
             Acepto la Política de Privacidad
           </label>
-          <label className={errors.isCheckedPC ? "error-border" : ""}>
+          <label>
             <input
               type="checkbox"
               name="isCheckedPC"
