@@ -1,4 +1,4 @@
-.container__plan-result {
+.container__card-result {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -11,7 +11,7 @@
   box-shadow: 0px 1px 32px 0px #aeacf359;
 }
 
-.plan-result {
+.card-result {
   display: flex;
   flex-direction: column;
   width: 224px;
@@ -65,7 +65,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    .prices__costoplan {
+    .prices__costocard {
       width: 108px;
       height: 16px;
       color: #7981b2;
@@ -85,6 +85,9 @@
       letter-spacing: -0.2px;
       text-align: left;
       text-decoration-line: line-through;
+      &.without-oldprice {
+        display: none;
+      }
     }
     .prices__price {
       font-size: 20px;
@@ -102,7 +105,7 @@
   margin-left: auto;
 }
 
-.plan-result__bullets {
+.card-result__bullets {
   display: flex;
   flex-direction: column;
   align-items: center;

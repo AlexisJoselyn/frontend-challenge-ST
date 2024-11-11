@@ -14,6 +14,10 @@
   opacity: 0px;
   box-shadow: 0px 1px 32px 0px #aeacf359;
 
+  &.with-border {
+    border: 2px solid #000000;
+  }
+
   &__label {
     position: relative;
     cursor: pointer;
