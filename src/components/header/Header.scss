@@ -3,15 +3,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 7.5rem;
-  min-height: 64px;
+  height: 64px;
+  @media (max-width: 768px){
+    height: 56px;
+    padding: 2rem 1.5rem;
+  }
 
   &__content {
     display: flex;
     align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    padding: 2rem 1.5rem;
+    font-weight: 600;
   }
 }
 
