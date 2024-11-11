@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
 import "./InfoSection.scss";
 
 export const InfoSection = () => {
-  const [userData, setUserData] = useState(null);
+  // const [userData, setUserData] = useState(null);
+  const { setUserData } = useContext(UserContext);
   const [formData, setFormData] = useState({
     documentType: "dni",
     documentNumber: "",
@@ -12,7 +14,7 @@ export const InfoSection = () => {
     isCheckedPP: false,
     isCheckedPC: false,
   });
-
+  
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
@@ -20,14 +22,13 @@ export const InfoSection = () => {
     axios
       .get("https://rimac-front-end-challenge.netlify.app/api/user.json")
       .then((response) => {
-        setUserData(response.data);
+        setUserData({...response.data});
       })
       .catch((error) => {
-        console.error("Erro obteniendo data de usuario", error);
+        console.error("Error obteniendo data de usuario", error);
       });
   }, []);
-
-  console.log(userData);
+  
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
