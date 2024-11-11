@@ -1,12 +1,24 @@
+@font-face {
+  font-family: 'BR Sonoma';
+  src: url('./assets/fonts/BRSonoma-Regular-BF654c45266c042.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --font-lato: "Lato", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --font-br-sonoma: "BR Sonoma", sans-serif;
+}
+
 body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'BR Sonoma', sans-serif;
+  font-family: var(--font-br-sonoma);
+  background-color: #fafbff;
 }
 
 .App {
   max-width: 2400px;
   margin: 0 auto;
 }
-

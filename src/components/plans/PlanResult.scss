@@ -1,0 +1,138 @@
+.container__plan-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 288px;
+  height: 687px;
+  padding: 68px 32px 48px 32px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0px 1px 32px 0px #aeacf359;
+}
+
+.plan-result {
+  display: flex;
+  flex-direction: column;
+  width: 224px;
+  max-height: 188px;
+  gap: 8px;
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 122px;
+    height: 20px;
+    padding: 2px 8px 2px 8px;
+    border-radius: 6px;
+    background-color: #7df0ba;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0.4000000059604645px;
+    text-decoration-skip-ink: none;
+    &.without-label {
+      display: none;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    width: 224px;
+    max-height: 160px;
+  }
+}
+
+.info__text {
+  display: flex;
+  flex-direction: column;
+  width: 152px;
+  max-height: 160px;
+  gap: 24px;
+
+  .text__title {
+    width: 152px;
+    max-height: 64px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #141938;
+  }
+  .text__prices {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .prices__costoplan {
+      width: 108px;
+      height: 16px;
+      color: #7981b2;
+      font-size: 12px;
+      font-weight: 900;
+      line-height: 16px;
+      letter-spacing: 0.6px;
+      text-align: left;
+    }
+    .prices__oldprice {
+      width: 152px;
+      height: 20px;
+      color: #7981b2;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.2px;
+      text-align: left;
+      text-decoration-line: line-through;
+    }
+    .prices__price {
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 28px;
+      letter-spacing: -0.20000000298023224px;
+      text-align: left;
+    }
+  }
+}
+
+.info__logo {
+  width: 56px;
+  height: 56px;
+  margin-left: auto;
+}
+
+.plan-result__bullets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 224px;
+  height: 328px;
+  gap: 40px;
+  text-align: center;
+  padding-inline-start: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    width: 224px;
+    height: 56px;
+    margin-left: 0;
+    color: #141938;
+    font-size: 16px;
+    // font-weisght: 700;
+    line-height: 28px;
+    letter-spacing: 0.10000000149011612px;
+    text-align: left;
+    list-style: none; /* Elimina el estilo de lista predeterminado */
+    position: relative; /* Necesario para el pseudo-elemento */
+
+    &::before {
+      content: "•"; /* Agrega el disco */
+      margin-right: 8px; /* Espacio entre el disco y el texto */
+      color: #141938; /* Color del disco */
+      font-size: 16px; /* Tamaño del disco */
+      line-height: 28px; /* Alineación vertical */
+    }
+  }
+}
