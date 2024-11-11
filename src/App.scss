@@ -8,6 +8,7 @@
   // Ajuste para cuando el Footer está ausente
   &.without-footer {
     min-height: calc(100vh);
+    background-color: #fafbff;
     &::after,
     &::before {
       display: none;
