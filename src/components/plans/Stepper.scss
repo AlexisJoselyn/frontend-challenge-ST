@@ -4,7 +4,9 @@
   background-color: #edeffc;
   height: 56px;
   @media (max-width: 768px) {
-    display: none;
+    width: 384px;
+    height: 57px;
+    background-color: #fafbff;
   }
 }
 
@@ -18,16 +20,19 @@
   height: 56px;
   padding: 16px 0;
   box-sizing: border-box;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .stepper__first,
-.stepper__second{
+.stepper__second {
   display: flex;
   gap: 16px;
 }
 
 .stepper__second {
-  color: #7981B2;
+  color: #7981b2;
 }
 
 .stepper__mobile {
@@ -35,5 +40,16 @@
   @media (max-width: 768px) {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 384px;
+    height: 57px;
+    gap: 16px;
+    padding: 16px 24px;
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0.800000011920929px;
+    text-align: left;
+    color: #141938;
   }
 }
