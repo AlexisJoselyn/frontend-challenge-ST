@@ -25,7 +25,7 @@ export default function Stepper({step1, step2, }) {
         </div>
       </div>
       <div className="stepper__mobile">
-        <a className="mobile__btn-volver" href="/planes">
+        <a className="mobile__btn-volver" href={isSummary?'/planes':'/'}>
           <img src={back} alt="" />
         </a>
         <div className="stepper__first">
