@@ -10,7 +10,8 @@
     margin-right: auto;
     margin-left: auto;
     @media (max-width: 768px){
-      width: 384px;
+      max-width: 384px;
+      width: 100%;
       flex-direction: column;
       flex-wrap: nowrap;
       align-items: center;

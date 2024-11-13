@@ -5,7 +5,8 @@
   flex-direction: column;
   gap: 16px;
   @media (max-width: 768px) {
-    width: 188px;
+    max-width: 188px;
+    width: 100%;
     height: 100px;
   }
 }
@@ -43,7 +44,8 @@
     line-height: 40px;
     margin: 0;
     @media (max-width: 768px) {
-      width: 188px;
+      max-width: 188px;
+      width: 100%;
       height: 72px;
       font-size: 28px;
       font-weight: 700;
@@ -124,10 +126,6 @@
         width: 212px;
         height: 56px;
         position: relative;
-        &.error-border {
-          border: 2px solid #ff1c44;
-          border-radius: 0 8px 8px 0;
-        }
       }
 
       input {
@@ -138,7 +136,9 @@
         box-sizing: border-box;
         padding: 16px;
         background: transparent;
-
+        &.error-border {
+          border: 2px solid #ff1c44;
+        }
       }
 
       label {
@@ -166,10 +166,6 @@
       width: 352px;
       height: 56px;
       position: relative;
-      &.error-border {
-        border: 2px solid #ff1c44;
-        border-radius: 8px;
-      }
 
       input {
         width: 100%;
@@ -180,6 +176,9 @@
         padding: 8px 16px;
         line-height: 24px;
         background: transparent;
+        &.error-border {
+          border: 2px solid #ff1c44;
+        }
       }
 
       label {
@@ -213,10 +212,6 @@
     flex-direction: column;
     gap: 10px;
 
-    &.error {
-      color: #ff1c44;
-    }
-
     @media (max-width: 768px) {
       font-size: 14px;
       font-weight: 400;
@@ -233,6 +228,9 @@
       align-items: center;
       gap: 12px;
       cursor: pointer;
+      &.error {
+        color: #ff1c44;
+      }
 
       input[type="checkbox"] {
         appearance: none;
