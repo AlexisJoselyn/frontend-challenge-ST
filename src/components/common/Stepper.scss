@@ -31,8 +31,17 @@
   gap: 16px;
 }
 
+.stepper__first {
+  &.inSummary {
+    color: #7981b2;
+  }
+}
+
 .stepper__second {
   color: #7981b2;
+  &.inSummary {
+    color: #141938;
+  }
 }
 
 .stepper__mobile {

@@ -1,33 +1,35 @@
 import React from "react";
 import line from "../../assets/line.svg";
-import step1 from "../../assets/atomo_stepper_1.svg";
-import step2 from "../../assets/atomo_stepper_2.svg";
 import back from "../../assets/atoms-button-circle-icons-web.png";
 import lineProgress from "../../assets/atoms_stepper_progress.png";
+import { useLocation } from "react-router-dom";
 import "./Stepper.scss";
 
-export default function Stepper() {
+export default function Stepper({step1, step2, }) {
+  const location = useLocation();
+  const isSummary = location.pathname === "/resumen";
+
   return (
     <div className="container">
       <div className="container__stepper">
-        <div className="stepper__first">
+        <div className={`stepper__first ${isSummary && "inSummary"}`}>
           <img src={step1} alt="" />
           <p>Planes y coberturas</p>
         </div>
         <div className="stepper__line">
           <img src={line} alt="" />
         </div>
-        <div className="stepper__second">
+        <div className={`stepper__second ${isSummary && "inSummary"}`}>
           <img src={step2} alt="" />
           <p>Resumen</p>
         </div>
       </div>
       <div className="stepper__mobile">
-        <a className="mobile__btn-volver" href="/">
+        <a className="mobile__btn-volver" href="/planes">
           <img src={back} alt="" />
         </a>
         <div className="stepper__first">
-          <p>PASO 1 de 2</p>
+          <p>{!isSummary ? 'PASO 1 DE 2' : 'PASO 2 DE 2'}</p>
         </div>
         <div className="stepper__line">
           <img src={lineProgress} alt="" />
