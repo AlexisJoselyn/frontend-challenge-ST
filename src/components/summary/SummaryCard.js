@@ -14,7 +14,7 @@ export default function SummaryCard() {
         <div className="user__title">PRECIOS CALCULADOS PARA:</div>
         <div className="user__name">
           <img src={iconFamily} alt="" />
-          <div className="name">{userData.name}</div>
+          <div className="name">{`${userData.name} ${userData.lastName}`}</div>
         </div>
       </div>
       <img className="line" src={line} alt="" />

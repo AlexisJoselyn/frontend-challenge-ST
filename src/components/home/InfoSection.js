@@ -54,7 +54,7 @@ export const InfoSection = () => {
         isCheckedPP: false,
         isCheckedPC: false,
       });
-    }, 900);
+    }, 1000);
 
     setErrors(newErrors);
     return !Object.values(newErrors).includes(true);
@@ -106,12 +106,9 @@ export const InfoSection = () => {
               <option value="ruc">RUC</option>
               <option value="ce">CNE</option>
             </select>
-            <div
-              className={`document__input-container ${
-                errors.documentNumber ? "error-border" : ""
-              }`}
-            >
+            <div className={"document__input-container"}>
               <input
+                className={`${errors.documentNumber ? "error-border" : ""}`}
                 name="documentNumber"
                 value={formData.documentNumber}
                 onChange={handleInputChange}
@@ -120,12 +117,9 @@ export const InfoSection = () => {
               <label>Nro. de documento</label>
             </div>
           </div>
-          <div
-            className={`inputs__cellphone ${
-              errors.cellphone ? "error-border" : ""
-            }`}
-          >
+          <div className="inputs__cellphone">
             <input
+              className={`${errors.cellphone ? "error-border" : ""}`}
               name="cellphone"
               value={formData.cellphone}
               onChange={handleInputChange}
@@ -134,8 +128,8 @@ export const InfoSection = () => {
             <label>Celular</label>
           </div>
         </div>
-        <div className={`form__check ${errors.isCheckedPC ? "error" : ""}`}>
-          <label>
+        <div className="form__check">
+          <label className={`${errors.isCheckedPP ? "error" : ""}`}>
             <input
               type="checkbox"
               name="isCheckedPP"
@@ -144,7 +138,7 @@ export const InfoSection = () => {
             />
             Acepto la Política de Privacidad
           </label>
-          <label>
+          <label className={`${errors.isCheckedPC ? "error" : ""}`}>
             <input
               type="checkbox"
               name="isCheckedPC"
