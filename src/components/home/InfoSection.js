@@ -39,7 +39,9 @@ export const InfoSection = () => {
   const validateForm = () => {
     const documentNumberLength = formData.documentType === "dni" ? 8 : 11;
     const newErrors = {
-      documentNumber: !formData.documentNumber || formData.documentNumber.length !== documentNumberLength,
+      documentNumber:
+        !formData.documentNumber ||
+        formData.documentNumber.length !== documentNumberLength,
       cellphone: !formData.cellphone || formData.cellphone.length !== 9,
       isCheckedPP: !formData.isCheckedPP,
       isCheckedPC: !formData.isCheckedPC,
@@ -61,8 +63,14 @@ export const InfoSection = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (validateForm()) {
+      setUserData((prevData) => ({
+        ...prevData,
+        documentType: formData.documentType,
+        documentNumber: formData.documentNumber,
+        cellphone: formData.cellphone,
+      }));
       console.log("Success:", formData);
-      navigate("/plans");
+      navigate("/planes");
     } else {
       console.log("Validation failed or incorrect values");
     }
@@ -126,13 +134,13 @@ export const InfoSection = () => {
             <label>Celular</label>
           </div>
         </div>
-        <div className={`form__check ${errors.isCheckedPC ? "error" : ""}`} >
+        <div className={`form__check ${errors.isCheckedPC ? "error" : ""}`}>
           <label>
             <input
               type="checkbox"
               name="isCheckedPP"
               checked={formData.isCheckedPP}
-              onChange={handleInputChange}              
+              onChange={handleInputChange}
             />
             Acepto la Política de Privacidad
           </label>

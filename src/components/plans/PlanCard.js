@@ -1,6 +1,5 @@
 import React from "react";
 import "./PlanCard.scss";
-import radioButton from "../../assets/atoms_radio_button_web.png";
 
 export default function PlanCard({ icon, title, description, onClick, isSelected }) {
   return (

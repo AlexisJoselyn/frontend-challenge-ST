@@ -4,7 +4,7 @@ import BtnSeleccionar from "./BtnSeleccionar";
 import "./CardResult.scss";
 
 export default function PlanResult({ index, title, oldPrice, price, logo, bullets }) {
-  
+  const plan = { title, price };
   return (
     <div className="container__card-result">
       <div className="card-result">
@@ -13,7 +13,7 @@ export default function PlanResult({ index, title, oldPrice, price, logo, bullet
           <div className="info__text">
             <div className="text__title">{title}</div>
             <div className="text__prices">
-              <div className="prices__costoplan">COSTO DEL PLAN</div>
+              <div className="prices__text">COSTO DEL PLAN</div>
               <div className={`prices__oldprice ${oldPrice===price&&"without-oldprice"}`}>{oldPrice} antes</div>
               <div className="prices__price">{`$${price} al mes`}</div>
             </div>
@@ -27,7 +27,7 @@ export default function PlanResult({ index, title, oldPrice, price, logo, bullet
             <li key={index}>{bullet}</li>
           ))}
       </ul>
-      <BtnSeleccionar></BtnSeleccionar>
+      <BtnSeleccionar plan={plan}></BtnSeleccionar>
     </div>
   );
 }
