@@ -1,12 +1,12 @@
 import React from 'react'
-import Stepper from '../plans/Stepper'
-import BtnVolver from '../plans/BtnVolver'
+import Stepper from '../common/Stepper'
+import BtnVolver from '../common/BtnVolver'
 
 export const Summary = () => {
   return (
     <div className='summary'>
         <Stepper></Stepper>
-        <BtnVolver></BtnVolver>
+        <BtnVolver path="/planes"></BtnVolver>
     </div>
   )
 }

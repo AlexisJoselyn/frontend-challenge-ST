@@ -62,7 +62,7 @@ export const InfoSection = () => {
     event.preventDefault();
     if (validateForm()) {
       console.log("Success:", formData);
-      navigate("/plans");
+      navigate("/planes");
     } else {
       console.log("Validation failed or incorrect values");
     }
