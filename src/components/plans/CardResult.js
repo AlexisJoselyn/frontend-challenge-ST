@@ -4,7 +4,7 @@ import BtnSeleccionar from "./BtnSeleccionar";
 import "./CardResult.scss";
 
 export default function PlanResult({ index, title, oldPrice, price, logo, bullets }) {
-  
+  const plan = { title, price };
   return (
     <div className="container__card-result">
       <div className="card-result">
@@ -27,7 +27,7 @@ export default function PlanResult({ index, title, oldPrice, price, logo, bullet
             <li key={index}>{bullet}</li>
           ))}
       </ul>
-      <BtnSeleccionar></BtnSeleccionar>
+      <BtnSeleccionar plan={plan}></BtnSeleccionar>
     </div>
   );
 }

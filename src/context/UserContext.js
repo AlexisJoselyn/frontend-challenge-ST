@@ -4,9 +4,14 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
   const [userData, setUserData] = useState({
-    name: "Rocío",
-    lastName: "Miranda Díaz",
-    birthDay: "02-04-1990"
+    name: "",
+    lastName: "",
+    birthDay: "02-04-1990",
+    documentType: "",
+    documentNumber: "",
+    cellphone: "",
+    selectedPlan: "",
+    planPrice:""
   });
 
   return (

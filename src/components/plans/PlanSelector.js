@@ -1,20 +1,19 @@
-import React, { useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 import { calculateAge } from "../../helpers/helpers";
-import "./PlanSelector.scss";
 import PlanCard from "./PlanCard";
 import iconMe from "../../assets/IcProtectionLight.png";
 import iconSomeone from "../../assets/IcAddUserLight.png";
 import PlanResults from "./PlanResults";
+import "./PlanSelector.scss";
 
 export default function PlanSelector() {
   const { userData } = useContext(UserContext);
-  const [selectedPlan, setSelectedPlan] = useState(null); 
-  
-  const age = calculateAge(userData.birthDay)
+  const [selectedPlan, setSelectedPlan] = useState(null);
+
+  const age = calculateAge(userData.birthDay);
 
   const handleOptionSelect = (plan) => {
-  
     setSelectedPlan(plan);
   };
 
@@ -44,7 +43,7 @@ export default function PlanSelector() {
           isSelected={selectedPlan === "Para alguien más"}
         ></PlanCard>
       </div>
-      {selectedPlan && <PlanResults age={age} selectedPlan={selectedPlan}/>}
+      {selectedPlan && <PlanResults age={age} selectedPlan={selectedPlan} />}
     </div>
   );
 }
