@@ -1,0 +1,85 @@
+.summary-card {
+  width: 928px;
+  height: 308px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 32px;
+  border-radius: 24px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 24px 0px #AEACF340;
+}
+
+.summary-card__user {
+  width: 864px;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .user__title {
+    width: 160px;
+    height: 16px;
+    font-size: 10px;
+    font-weight: 900;
+    line-height: 16px;
+    letter-spacing: 0.800000011920929px;
+    text-align: left;
+    color: #141938;
+  }
+
+  .user__name {
+    width: 206px;
+    height: 28px;
+    display: flex;
+    gap: 12px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+    .name {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 28px;
+      letter-spacing: -0.20000000298023224px;
+      text-align: left;
+      color: #141938;
+    }
+  }
+}
+
+.summary-card__user-info,
+.summary-card__user-plan {
+  width: 864px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .user-info__title,
+  .user-plan__title {
+    width: 232px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: left;
+    color: #141938;
+  }
+
+  .user-info__document,
+  .user-info__phone,
+  .user-plan__plan,
+  .user-plan__price {
+    width: 232px;
+    height: 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.10000000149011612px;
+    text-align: left;
+    color: #141938;
+  }
+}

@@ -13,7 +13,7 @@ export default function PlanResult({ index, title, oldPrice, price, logo, bullet
           <div className="info__text">
             <div className="text__title">{title}</div>
             <div className="text__prices">
-              <div className="prices__costoplan">COSTO DEL PLAN</div>
+              <div className="prices__text">COSTO DEL PLAN</div>
               <div className={`prices__oldprice ${oldPrice===price&&"without-oldprice"}`}>{oldPrice} antes</div>
               <div className="prices__price">{`$${price} al mes`}</div>
             </div>

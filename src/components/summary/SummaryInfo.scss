@@ -1,0 +1,42 @@
+.summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 928px; //ajustado
+  height: 376px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    width: 384px;
+  }
+
+  .summary-info__text {
+    width: 544px;
+    height: 96px;
+    gap: 0px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.6000000238418579px;
+    color: #141938;
+    margin: 0;
+    @media (max-width: 768px) {
+      width: 384px;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: -0.2px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    @media (max-width: 768px) {
+      width: 384px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
